@@ -37,6 +37,11 @@ public class Main extends Application {
 		Label name = new Label("Full Name");
 		Label email = new Label("Email");
 		Label program = new Label("Program Field");
+		TextField student_id_text = new TextField();
+		TextField name_text = new TextField();
+		TextField email_text = new TextField();
+		TextField program_text = new TextField();
+		
 		
 		Button dashboard = new Button("Dashboard");
 		Button registration = new Button("Registration");
