@@ -28,6 +28,7 @@ public class Main extends Application {
 		title_container.setPadding(new Insets(10, 10, 10, 10));
 		title_container.getChildren().add(title);;
 		VBox navigator = new VBox(40);
+		navigator.setPadding(new Insets(10,10,10,10));
 		Button dashboard = new Button("Dashboard");
 		Button registration = new Button("Registration");
 		Button courses = new Button("Courses");
