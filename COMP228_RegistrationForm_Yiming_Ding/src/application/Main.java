@@ -34,8 +34,9 @@ public class Main extends Application {
 		
 		Button register = new Button("Register");
 		Button clear = new Button("Clear");
+		Label inform_user = new Label("");
 		
-		submit_container.getChildren().addAll(register, clear);
+		submit_container.getChildren().addAll(inform_user, register, clear);
 
 		GridPane form = new GridPane();
 		form.setHgap(30);
@@ -93,8 +94,15 @@ public class Main extends Application {
 		});
 		
 		register.setOnAction(event -> {
-			if(student_id_text.getText() == null) {
-				System.out.print("fuck");
+			if(student_id_text.getText() == "" ||
+					name_text.getText() == ""||
+					email_text.getText() == ""||
+					program_text.getText() == "") 
+			{
+				inform_user.setText("Invalid Entry");
+			}
+			else {
+				inform_user.setText("Registration Complete");
 			}
 		});
 	}
