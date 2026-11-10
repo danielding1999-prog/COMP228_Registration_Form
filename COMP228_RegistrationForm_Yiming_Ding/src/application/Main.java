@@ -31,6 +31,8 @@ public class Main extends Application {
 		Button registration = new Button("Registration");
 		Button courses = new Button("Courses");
 		Button help = new Button("Help");
+		navigator.getChildren().addAll(dashboard, registration,
+				courses, help);
 		root.setTop(title_container);
 		
 		
