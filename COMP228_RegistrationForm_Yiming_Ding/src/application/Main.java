@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.*;
 import javafx.scene.Group;
 
@@ -33,7 +34,10 @@ public class Main extends Application {
 		Button help = new Button("Help");
 		navigator.getChildren().addAll(dashboard, registration,
 				courses, help);
+		navigator.setAlignment(Pos.CENTER);
+		
 		root.setTop(title_container);
+		root.setLeft(navigator);
 		
 		
 		
