@@ -38,6 +38,7 @@ public class Main extends Application {
 		submit_container.getChildren().addAll(register, clear);
 
 		GridPane form = new GridPane();
+		form.setHgap(30);
 		Label student_id = new Label("Student ID");
 		Label name = new Label("Full Name");
 		Label email = new Label("Email");
@@ -66,10 +67,12 @@ public class Main extends Application {
 		navigator.getChildren().addAll(dashboard, registration, courses, help);
 		navigator.setAlignment(Pos.CENTER);
 		title_container.setAlignment(Pos.CENTER);
+		submit_container.setAlignment(Pos.BASELINE_RIGHT);
 
 		root.setTop(title_container);
 		root.setLeft(navigator);
 		root.setCenter(form_container);
+		root.setBottom(submit_container);
 
 		try {
 			Scene scene = new Scene(root, 400, 400);
@@ -80,6 +83,20 @@ public class Main extends Application {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		clear.setOnAction(event ->{
+			student_id_text.clear();
+			name_text.clear();
+			email_text.clear();
+			program_text.clear();
+			
+		});
+		
+		register.setOnAction(event -> {
+			if(student_id_text.getText() == null) {
+				System.out.print("fuck");
+			}
+		});
 	}
 
 	public static void main(String[] args) {
