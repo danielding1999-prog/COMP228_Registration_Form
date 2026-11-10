@@ -35,6 +35,7 @@ public class Main extends Application {
 		navigator.getChildren().addAll(dashboard, registration,
 				courses, help);
 		navigator.setAlignment(Pos.CENTER);
+		title_container.setAlignment(Pos.CENTER);
 		
 		root.setTop(title_container);
 		root.setLeft(navigator);
