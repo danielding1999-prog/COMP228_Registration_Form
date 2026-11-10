@@ -31,6 +31,11 @@ public class Main extends Application {
 		VBox form_container = new VBox(40);
 		HBox submit_container = new HBox(40);
 		navigator.setPadding(new Insets(10, 10, 10, 10));
+		
+		Button register = new Button("Register");
+		Button clear = new Button("Clear");
+		
+		submit_container.getChildren().addAll(register, clear);
 
 		GridPane form = new GridPane();
 		Label student_id = new Label("Student ID");
@@ -50,10 +55,10 @@ public class Main extends Application {
 		form.add(name_text, 1, 1);
 		form.add(email_text, 1, 2);
 		form.add(program_text, 1, 3);
-		
+
 		form_container.getChildren().add(form);
 		form_container.setPadding(new Insets(30, 0, 0, 0));
-		
+
 		Button dashboard = new Button("Dashboard");
 		Button registration = new Button("Registration");
 		Button courses = new Button("Courses");
@@ -65,7 +70,7 @@ public class Main extends Application {
 		root.setTop(title_container);
 		root.setLeft(navigator);
 		root.setCenter(form_container);
-		
+
 		try {
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
