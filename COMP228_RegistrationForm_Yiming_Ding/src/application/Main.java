@@ -41,6 +41,15 @@ public class Main extends Application {
 		TextField name_text = new TextField();
 		TextField email_text = new TextField();
 		TextField program_text = new TextField();
+
+		form.add(student_id, 0, 0);
+		form.add(name, 0, 1);
+		form.add(email, 0, 2);
+		form.add(program, 0, 3);
+		form.add(student_id_text, 1, 0);
+		form.add(name_text, 1, 1);
+		form.add(email_text, 1, 2);
+		form.add(program_text, 1, 3);
 		
 		
 		Button dashboard = new Button("Dashboard");
