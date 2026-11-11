@@ -90,6 +90,7 @@ public class Main extends Application {
 			name_text.clear();
 			email_text.clear();
 			program_text.clear();
+			inform_user.setText("");
 			
 		});
 		
